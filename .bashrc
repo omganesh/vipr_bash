@@ -18,7 +18,7 @@ setDebug(){
 
 
 resetAudit(){
-	rm .f /var/log/audit/audit.log
+	rm -f /var/log/audit/audit.log
 	systemctl restart auditd 
 }
 
