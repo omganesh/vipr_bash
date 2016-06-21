@@ -25,3 +25,7 @@ resetAudit(){
 restartVipr(){
 	/etc/storageos/storageos restart 
 }
+
+cleanAuditLog(){
+	rm -rf /var/log/audit/audit.log
+}
