@@ -2,6 +2,8 @@ umask 022
 alias goCoprHDSource="cd /workspace/coprhd/coprhd-controller"
 alias listDb="/opt/storageos/bin/dbcli list"
 alias goViprBash="cd ~/vipr_bash"
+alias listUmfs="listDb UnManagedFileSystem"
+alias listUmfsQd="listDb UnManagedFileQuotaDirectory"
 
 prepareGit(){
 	git config --global user.name Om Ganesh
@@ -41,4 +43,7 @@ cleanViprDb(){
 }
 cleanUmfs(){
 	cleanViprDb UnManagedFileSystem
+}
+cleanUmfsQd(){
+	cleanViprDb UnManagedFileQuotaDirectory
 }
