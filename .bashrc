@@ -29,3 +29,14 @@ restartVipr(){
 cleanAuditLog(){
 	rm -rf /var/log/audit/audit.log
 }
+
+
+cleanViprDb(){
+	value=`/opt/storageos/bin/dbcli list $1 | grep 'id:' | cut -d ' ' -f2`
+	list=`echo $value | sed 's/ /,/g'`
+	/opt/storageos/bin/dbcli delete -i "$list" $1
+
+}
+cleanUmfs(){
+	cleanViprDb UnManagedFileSystem
+}
