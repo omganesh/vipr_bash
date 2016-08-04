@@ -1,6 +1,7 @@
 umask 022
 alias goCoprHDSource="cd /workspace/coprhd/coprhd-controller"
 alias listDb="/opt/storageos/bin/dbcli list"
+alias goViprBash="cd ~/vipr_bash"
 
 prepareGit(){
 	git config --global user.name Om Ganesh
